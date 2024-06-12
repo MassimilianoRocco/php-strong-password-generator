@@ -1,19 +1,20 @@
 <?php
 $userLength = $_GET["userPswLength"];
 
+
 $generalString = "qwertyuiopasdf1234567890ghjklzxcvbnmQW!|£$%&/()=?^+-*.:_;<>ERTYUIOPASDFGHJKLZXCVBNM";
 
-// $lowerCaseString = "qwertyuiopasdfghjklzxcvbnm";
-// $upperCaseString = "QWERTYUIOPASDFGHJKLZXCVBNM";
-// $numberString = "1234567890";
-// $symbolString = "!|£$%&/()=?^+-*.:_;<>";
+$lowerCaseString = $_GET["userLowerCase"] ? $_GET["userLowerCase"]: "";
+$upperCaseString = $_GET["userUpperCase"] ? $_GET["userUpperCase"] : "" ;
+$numberString = $_GET["userNumbers"] ? $_GET["userNumbers"] :"" ;
+$symbolString = $_GET["userSpecialC"] ? $_GET["userSpecialC"]: "CIAO";
 
-$pswString = "";
+$pswString = $lowerCaseString . $upperCaseString . $numberString . $symbolString;
 
-for($x=0; $x<$userLength; $x++){
-    $randomIndex = rand(1, strlen($generalString));
-    $pswString .= $generalString[$randomIndex];
-}
+// for($x=0; $x<$userLength; $x++){
+//     $randomIndex = rand(1, strlen($generalString));
+//     $pswString .= $generalString[$randomIndex];
+// }
 
 ?>
 

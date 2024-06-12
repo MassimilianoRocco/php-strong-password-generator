@@ -13,17 +13,17 @@
                 <label for="psw_length"> Insert the password length desired</label><br>
                 <input type="number" id="psw_length" name="userPswLength"><br><br>
 
-                <label for="uppercase">Lowercase?</label><br>
-                <input type="checkbox" id="uppercase" name="vehicle1" value="Bike"><br><br>
+                <label for="lowercase">Lowercase?</label><br>
+                <input type="checkbox" id="lowercase" name="userLowerCase" value="qwertyuiopasdfghjklzxcvbnm"><br><br>
 
                 <label for="uppercase">Uppercase?</label><br>
-                <input type="checkbox" id="uppercase" name="vehicle1" value="Bike"><br><br>
+                <input type="checkbox" id="uppercase" name="userUpperCase" value="QWERTYUIOPASDFGHJKLZXCVBNM"><br><br>
 
                 <label for="numbers"> Numbers?</label><br>
-                <input type="checkbox" id="numbers" name="vehicle2" value="Car"><br><br>
+                <input type="checkbox" id="numbers" name="userNumbers" value="1234567890"><br><br>
 
                 <label for="specialC"> Special characters?</label><br>
-                <input type="checkbox" id="specialC" name="vehicle3" value="Boat"><br><br>
+                <input type="checkbox" id="specialC" name="userSpecialC" value="!|£$%&/()=?^+-*.:_;<>"><br><br>
 
                 <input type="submit" value="Submit">
             </form>
