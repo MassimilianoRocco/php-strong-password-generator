@@ -1,20 +1,18 @@
 <?php
 $userLength = $_GET["userPswLength"];
 
-
-$generalString = "qwertyuiopasdf1234567890ghjklzxcvbnmQW!|£$%&/()=?^+-*.:_;<>ERTYUIOPASDFGHJKLZXCVBNM";
-
-$lowerCaseString = $_GET["userLowerCase"] ? $_GET["userLowerCase"]: "";
-$upperCaseString = $_GET["userUpperCase"] ? $_GET["userUpperCase"] : "" ;
-$numberString = $_GET["userNumbers"] ? $_GET["userNumbers"] :"" ;
-$symbolString = $_GET["userSpecialC"] ? $_GET["userSpecialC"]: "CIAO";
+$lowerCaseString = isset($_GET["userLowerCase"]) ? $_GET["userLowerCase"]: "";
+$upperCaseString = isset($_GET["userUpperCase"]) ? $_GET["userUpperCase"] : "" ;
+$numberString = isset($_GET["userNumbers"]) ? $_GET["userNumbers"] :"" ;
+$symbolString = isset($_GET["userSpecialC"]) ? $_GET["userSpecialC"]: "";
 
 $pswString = $lowerCaseString . $upperCaseString . $numberString . $symbolString;
+$pswShowedString = "";
 
-// for($x=0; $x<$userLength; $x++){
-//     $randomIndex = rand(1, strlen($generalString));
-//     $pswString .= $generalString[$randomIndex];
-// }
+for($x=0; $x<$userLength; $x++){
+    $randomIndex = rand(0, strlen($pswString)-1);
+    $pswShowedString .= $pswString[$randomIndex];
+}
 
 ?>
 
@@ -30,7 +28,7 @@ $pswString = $lowerCaseString . $upperCaseString . $numberString . $symbolString
 <body>
     <div class="container">
         <div class="psw_box">
-            <p><?php echo $pswString ?></p>
+            <p><?php echo $pswShowedString ?></p>
         </div>
     </div>
 </body>
