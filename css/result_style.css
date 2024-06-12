@@ -11,3 +11,12 @@
     justify-content: center;
     align-items: center;
 }
+
+.psw_box{
+    width: 400px;
+    height: 400px;
+    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

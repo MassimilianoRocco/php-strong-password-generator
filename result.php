@@ -1,9 +1,18 @@
 <?php
 $userLength = $_GET["userPswLength"];
 
+$generalString = "qwertyuiopasdf1234567890ghjklzxcvbnmQW!|£$%&/()=?^+-*.:_;<>ERTYUIOPASDFGHJKLZXCVBNM";
+
+// $lowerCaseString = "qwertyuiopasdfghjklzxcvbnm";
+// $upperCaseString = "QWERTYUIOPASDFGHJKLZXCVBNM";
+// $numberString = "1234567890";
+// $symbolString = "!|£$%&/()=?^+-*.:_;<>";
+
 $pswString = "";
+
 for($x=0; $x<$userLength; $x++){
-    $pswString .= "X";
+    $randomIndex = rand(1, strlen($generalString));
+    $pswString .= $generalString[$randomIndex];
 }
 
 ?>
@@ -18,6 +27,10 @@ for($x=0; $x<$userLength; $x++){
     <title>php-strong-password-generator-Result</title>
 </head>
 <body>
-    <p><?php echo $pswString ?></p>
+    <div class="container">
+        <div class="psw_box">
+            <p><?php echo $pswString ?></p>
+        </div>
+    </div>
 </body>
 </html>
